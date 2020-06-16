@@ -24,7 +24,6 @@ const initialFormValues = {
 
 export default function App() {
   const [friends, setFriends] = useState(initialFriendsList)
-
   // 🔥 STEP 1 - WE NEED STATE TO HOLD ALL VALUES OF THE FORM!
   const [formValues, setFormValues] = useState(initialFormValues) // fix this using the state hook
 
@@ -47,7 +46,7 @@ export default function App() {
 
   const onSubmit = evt => {
     console.log('submitting!!!!')
-
+    evt.preventDefault()
     // 🔥 STEP 9 - IMPLEMENT A SUBMIT HANDLER
 
     // a) don't allow the browser to reload!
@@ -55,7 +54,9 @@ export default function App() {
     // c) make a new friend object
     //    set up the new friend with the correct attributes
     //    using the information inside the state of the form
+    const newFriend = { ...formValues, id: uuid() }
     // d) update the list of friends in state with the new friend
+    
     // e) optionally clear the form
   }
 
