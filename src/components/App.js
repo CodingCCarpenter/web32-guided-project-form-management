@@ -46,22 +46,23 @@ export default function App() {
 
   const onSubmit = evt => {
     console.log('submitting!!!!')
-    evt.preventDefault()
     // 🔥 STEP 9 - IMPLEMENT A SUBMIT HANDLER
 
     // a) don't allow the browser to reload!
+    evt.preventDefault()
     // b) don't allow the submission, if any of the formValues is empty!
+      //used 'require'
     // c) make a new friend object
     //    set up the new friend with the correct attributes
     //    using the information inside the state of the form
     const newFriend = { 
       id: uuid(), 
-      username: formValues.username.trim,
-      email: formValues.email.trim,
+      username: formValues.username.trim(),
+      email: formValues.email.trim(),
       role: formValues.role
     }
     // d) update the list of friends in state with the new friend
-    setFriends(friend => [newFriend, ...friends])
+    setFriends(friends => [newFriend, ...friends])
     // e) optionally clear the form
     setFormValues(initialFormValues)
   }
