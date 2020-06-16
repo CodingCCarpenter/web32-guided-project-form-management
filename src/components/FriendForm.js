@@ -42,12 +42,12 @@ export default function FriendForm(props) {
         <label>Email:&nbsp;
           {/* 🔥 STEP 6 - Make an input of type `text` for email. */}
           <input
-          type='email'
-          name='email' 
-          value={values.email}
-          onChange={onInputChange}
-          required  
-        />  
+            type='email'
+            name='email' 
+            value={values.email}
+            onChange={onInputChange}
+            required  
+          />  
         </label>
 
         {/* ////////// DROPDOWN ////////// */}
@@ -55,6 +55,14 @@ export default function FriendForm(props) {
         {/* ////////// DROPDOWN ////////// */}
         <label>Role:&nbsp;
           {/* 🔥 STEP 7 - Make dropdown for role. */}
+          <select>
+          <option value =''>--Select a Role!--</option>
+            <option value ='Instructor'>Instructor</option>
+            <option value ='Student'>Student</option>
+            <option value ='Team Lead'>Team Lead</option>
+            <option value ='Section Lead'>Section Lead</option>
+            <option value ='Coordinator'>Coordinator</option>
+          </select> 
         </label>
       </div>
     </form>
