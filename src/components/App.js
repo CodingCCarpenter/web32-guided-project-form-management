@@ -26,7 +26,7 @@ export default function App() {
   const [friends, setFriends] = useState(initialFriendsList)
 
   // 🔥 STEP 1 - WE NEED STATE TO HOLD ALL VALUES OF THE FORM!
-  const [formvalues, setFormValues] = useState(initialFormValues) // fix this using the state hook
+  const [formValues, setFormValues] = useState(initialFormValues) // fix this using the state hook
 
   const onInputChange = evt => {
     // 🔥 STEP 8 - IMPLEMENT A CHANGE HANDLER (works for inputs and dropdowns)
@@ -54,6 +54,9 @@ export default function App() {
       <header><h1>Friends App</h1></header>
 
       <FriendForm
+        values={formValues}
+        onInputChange={onInputChange}
+        onSubmit={onSubmit}
         // 🔥 STEP 2 - The form component needs its props.
         //    Check implementation of FriendForm
         //    to see what props it expects.
