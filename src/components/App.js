@@ -29,14 +29,15 @@ export default function App() {
   const [formValues, setFormValues] = useState(initialFormValues) // fix this using the state hook
 
   const onInputChange = evt => {
-    debugger
-    
+
     // 🔥 STEP 8 - IMPLEMENT A CHANGE HANDLER (works for inputs and dropdowns)
     // which can change the state of inputs of type text
 
     // a) pull the name of the input from the event object
     // b) pull the value of the input from the event object
+    const { name, value } = evt.target
     // c) set a new state for the whole form
+    
   }
 
   const onSubmit = evt => {
