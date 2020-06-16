@@ -35,14 +35,19 @@ export default function FriendForm(props) {
           onChange={onInputChange}
           maxLength='100'
           required  
-        />
-
-        
+        />    
         
         </label>
 
         <label>Email:&nbsp;
           {/* 🔥 STEP 6 - Make an input of type `text` for email. */}
+          <input
+          type='email'
+          name='email' 
+          value={values.email}
+          onChange={onInputChange}
+          required  
+        />  
         </label>
 
         {/* ////////// DROPDOWN ////////// */}
