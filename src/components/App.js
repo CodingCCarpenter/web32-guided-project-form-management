@@ -38,6 +38,8 @@ export default function App() {
   }
 
   const onSubmit = evt => {
+    console.log('submitting!!!!')
+
     // 🔥 STEP 9 - IMPLEMENT A SUBMIT HANDLER
 
     // a) don't allow the browser to reload!
