@@ -40,7 +40,8 @@ export default function App() {
     setFormValues({
       //copy here all the current values of the form
       //change the target name property to be the value
-      ...formValues 
+      ...formValues,
+      [name]: value,
     })
   }
 
